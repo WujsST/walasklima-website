@@ -33,7 +33,7 @@ const CustomerCare = () => {
         const isLast = index === totalCards - 1;
 
         // Set initial state with proper stacking offset
-        gsap.set(card, {
+        gsap.set(card as gsap.DOMTarget, {
           position: 'sticky',
           top: 0,
           zIndex: totalCards - index,
