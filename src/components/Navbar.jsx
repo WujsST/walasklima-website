@@ -26,9 +26,7 @@ const Navbar = () => {
             }`}>
             {/* Brand */}
             <div className="flex items-center gap-2">
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xl ${scrolled ? 'bg-primary text-white' : 'bg-white text-primary'}`}>
-                    W
-                </div>
+                <img src="/logo.png" alt="Walas Klimatyzacja" className="h-8 w-auto object-contain" />
                 <span className={`font-heading font-bold text-lg hidden sm:block ${scrolled ? 'text-primary' : 'text-white'}`}>
                     Walas Klimatyzacja
                 </span>
