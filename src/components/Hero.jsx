@@ -45,9 +45,9 @@ const Hero = () => {
             {/* Content Container */}
             <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col justify-end h-full mt-auto">
 
-                <div className="max-w-3xl">
+                <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
                     {/* Google Reviews Badge */}
-                    <div className="hero-text-anim flex items-center gap-2 sm:gap-4 bg-white rounded-lg p-2 pr-3 sm:pr-4 w-fit mb-4 sm:mb-6 shadow-2xl scale-95 sm:scale-100 origin-left">
+                    <div className="hero-text-anim flex items-center gap-2 sm:gap-4 bg-white rounded-lg p-2 pr-3 sm:pr-4 w-fit mb-6 sm:mb-8 shadow-2xl scale-95 sm:scale-100 origin-center">
                         <div className="flex flex-col items-center justify-center bg-gray-50 rounded px-2 py-0.5 border border-gray-100">
                             <span className="text-dark font-black text-sm sm:text-base leading-tight">5.0</span>
                             <div className="flex text-yellow-400">
@@ -58,7 +58,7 @@ const Hero = () => {
                                 <Star size={8} sm-size={10} fill="currentColor" />
                             </div>
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col text-left">
                             <span className="text-dark font-bold text-xs sm:text-sm leading-tight">248 opinii w Google</span>
                             <span className="text-gray-500 text-[9px] sm:text-[10px] leading-tight mt-0.5">Klimatyzacja Marcin Walas</span>
                         </div>
@@ -72,23 +72,23 @@ const Hero = () => {
                         <span className="block font-heading font-extrabold text-accent mt-1 lg:mt-2">Kompromisów.</span>
                     </h1>
 
-                    <p className="hero-text-anim text-sm sm:text-base lg:text-lg text-white/90 mt-4 lg:mt-6 max-w-2xl font-regular leading-relaxed">
+                    <p className="hero-text-anim text-sm sm:text-base lg:text-lg text-white/90 mt-4 lg:mt-6 max-w-2xl mx-auto font-regular leading-relaxed">
                         Ciesz się idealną temperaturą w domu, biurze i samochodzie. Gwarantujemy błyskawiczny montaż i niezawodny serwis na terenie Łodzi.
                     </p>
 
-                    <div className="hero-text-anim mt-6 lg:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-                        <Link to="/quiz" className="w-full sm:w-auto relative group overflow-hidden bg-accent text-white px-6 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-center shadow-lg shadow-accent/20">
+                    <div className="hero-text-anim mt-6 lg:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+                        <Link to="/quiz" className="w-full sm:w-auto min-w-[240px] relative group overflow-hidden bg-accent text-white px-6 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-center shadow-lg shadow-accent/20">
                             <span className="relative z-10 block transition-transform group-hover:scale-105 duration-300">NATYCHMIASTOWA WYCENA</span>
                             <div className="absolute inset-0 bg-[#4ea632] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
                         </Link>
 
-                        <a href="tel:+48604099876" className="w-full sm:w-auto relative bg-[#0C3261] border border-white/10 text-white px-6 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-center hover:bg-[#164b91] transition-colors shadow-lg shadow-primary/30">
+                        <a href="tel:+48604099876" className="w-full sm:w-auto min-w-[240px] relative bg-[#0C3261] border border-white/10 text-white px-6 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-center hover:bg-[#164b91] transition-colors shadow-lg shadow-primary/30">
                             ZADZWOŃ: 604 099 876
                         </a>
                     </div>
 
                     {/* Checkmarks / Benefits */}
-                    <div className="hero-text-anim mt-5 sm:mt-6 flex flex-row flex-wrap gap-x-4 gap-y-2 text-white/90 font-medium text-xs md:text-sm">
+                    <div className="hero-text-anim mt-5 sm:mt-6 flex flex-row flex-wrap justify-center gap-x-4 gap-y-2 text-white/90 font-medium text-xs md:text-sm">
                         <div className="flex items-center gap-1.5"><Check size={16} className="text-accent shrink-0" /> Szybka realizacja i naprawy</div>
                         <div className="flex items-center gap-1.5"><Check size={16} className="text-accent shrink-0" /> Certyfikat F-GAZ</div>
                         <div className="flex items-center gap-1.5"><Check size={16} className="text-accent shrink-0" /> Gwarancja bezawaryjności</div>
