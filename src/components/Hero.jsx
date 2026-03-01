@@ -46,9 +46,14 @@ const Hero = () => {
             <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col justify-end h-full mt-auto">
 
                 <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-                    {/* Google Reviews Badge */}
-                    <div className="hero-text-anim flex items-center gap-2 sm:gap-4 bg-white rounded-lg p-2 pr-3 sm:pr-4 w-fit mb-6 sm:mb-8 shadow-2xl scale-95 sm:scale-100 origin-center">
-                        <div className="flex flex-col items-center justify-center bg-gray-50 rounded px-2 py-0.5 border border-gray-100">
+                    {/* Google Reviews Badge - Clickable */}
+                    <a
+                        href="https://search.google.com/local/reviews?placeid=ChIJsU_o2oDLG0cR7pVof1AXm4Q"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hero-text-anim flex items-center gap-2 sm:gap-4 bg-white/95 hover:bg-white rounded-lg p-2 pr-3 sm:pr-4 w-fit mb-4 sm:mb-6 shadow-2xl scale-95 sm:scale-100 origin-center cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group"
+                    >
+                        <div className="flex flex-col items-center justify-center bg-gray-50 rounded px-2 py-0.5 border border-gray-100 group-hover:bg-white transition-colors">
                             <span className="text-dark font-black text-sm sm:text-base leading-tight">5.0</span>
                             <div className="flex text-yellow-400">
                                 <Star size={8} sm-size={10} fill="currentColor" />
@@ -59,13 +64,13 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="flex flex-col text-left">
-                            <span className="text-dark font-bold text-xs sm:text-sm leading-tight">248 opinii w Google</span>
-                            <span className="text-gray-500 text-[9px] sm:text-[10px] leading-tight mt-0.5">Klimatyzacja Marcin Walas</span>
+                            <span className="text-dark font-bold text-xs sm:text-sm leading-tight group-hover:text-primary transition-colors">Zweryfikowane w Google</span>
+                            <span className="text-gray-500 text-[9px] sm:text-[10px] leading-tight mt-0.5">Zobacz opinie naszych klientów</span>
                         </div>
                         <div className="ml-1 w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center rounded-full bg-blue-50 shrink-0">
                             <span className="font-bold text-sm sm:text-base" style={{ color: '#4285F4' }}>G</span>
                         </div>
-                    </div>
+                    </a>
 
                     <h1 className="hero-text-anim text-4xl sm:text-5xl lg:text-7xl leading-[1.05] text-white">
                         <span className="block font-heading font-extrabold tracking-tight">Klimatyzacja bez</span>
