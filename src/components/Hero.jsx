@@ -27,7 +27,7 @@ const Hero = () => {
     return (
         <section
             ref={container}
-            className="relative min-h-[100dvh] w-full flex flex-col justify-center overflow-hidden px-6 lg:px-20 pt-32 pb-8"
+            className="relative min-h-[100dvh] w-full flex flex-col justify-end overflow-hidden px-6 lg:px-20 pt-24 pb-6 lg:pb-8"
         >
             {/* Background Image & Gradient overlays for optimal readability */}
             <div className="absolute inset-0 z-0 bg-[#091522]">
@@ -43,75 +43,75 @@ const Hero = () => {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col justify-between h-full pt-4 md:pt-14">
+            <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col justify-end h-full mt-auto">
 
                 <div className="max-w-3xl">
                     {/* Google Reviews Badge */}
-                    <div className="hero-text-anim flex items-center gap-3 sm:gap-4 bg-white rounded-lg p-2.5 pr-4 w-fit mb-6 sm:mb-8 shadow-2xl">
-                        <div className="flex flex-col items-center justify-center bg-gray-50 rounded px-2 sm:px-3 py-1 border border-gray-100">
-                            <span className="text-dark font-black text-base sm:text-lg leading-tight">5.0</span>
+                    <div className="hero-text-anim flex items-center gap-2 sm:gap-4 bg-white rounded-lg p-2 pr-3 sm:pr-4 w-fit mb-4 sm:mb-6 shadow-2xl scale-95 sm:scale-100 origin-left">
+                        <div className="flex flex-col items-center justify-center bg-gray-50 rounded px-2 py-0.5 border border-gray-100">
+                            <span className="text-dark font-black text-sm sm:text-base leading-tight">5.0</span>
                             <div className="flex text-yellow-400">
-                                <Star size={10} fill="currentColor" />
-                                <Star size={10} fill="currentColor" />
-                                <Star size={10} fill="currentColor" />
-                                <Star size={10} fill="currentColor" />
-                                <Star size={10} fill="currentColor" />
+                                <Star size={8} sm-size={10} fill="currentColor" />
+                                <Star size={8} sm-size={10} fill="currentColor" />
+                                <Star size={8} sm-size={10} fill="currentColor" />
+                                <Star size={8} sm-size={10} fill="currentColor" />
+                                <Star size={8} sm-size={10} fill="currentColor" />
                             </div>
                         </div>
                         <div className="flex flex-col">
-                            <span className="text-dark font-bold text-xs sm:text-sm">248 opinii w Google</span>
-                            <span className="text-gray-500 text-[10px] sm:text-xs">Klimatyzacja Marcin Walas</span>
+                            <span className="text-dark font-bold text-xs sm:text-sm leading-tight">248 opinii w Google</span>
+                            <span className="text-gray-500 text-[9px] sm:text-[10px] leading-tight mt-0.5">Klimatyzacja Marcin Walas</span>
                         </div>
-                        <div className="ml-2 w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-blue-50 shrink-0">
-                            <span className="font-bold text-lg" style={{ color: '#4285F4' }}>G</span>
+                        <div className="ml-1 w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center rounded-full bg-blue-50 shrink-0">
+                            <span className="font-bold text-sm sm:text-base" style={{ color: '#4285F4' }}>G</span>
                         </div>
                     </div>
 
-                    <h1 className="hero-text-anim text-[2.75rem] sm:text-6xl lg:text-[5.5rem] leading-[1.05] text-white">
+                    <h1 className="hero-text-anim text-4xl sm:text-5xl lg:text-7xl leading-[1.05] text-white">
                         <span className="block font-heading font-extrabold tracking-tight">Klimatyzacja bez</span>
-                        <span className="block font-heading font-extrabold text-accent mt-1 lg:mt-3">Kompromisów.</span>
+                        <span className="block font-heading font-extrabold text-accent mt-1 lg:mt-2">Kompromisów.</span>
                     </h1>
 
-                    <p className="hero-text-anim text-base sm:text-lg lg:text-xl text-white/90 mt-6 lg:mt-8 max-w-2xl font-regular leading-relaxed">
-                        Ciesz się idealną temperaturą w domu, biurze i samochodzie. Gwarantujemy błyskawiczny montaż, sterylność po pracy i niezawodny serwis na terenie Łodzi.
+                    <p className="hero-text-anim text-sm sm:text-base lg:text-lg text-white/90 mt-4 lg:mt-6 max-w-2xl font-regular leading-relaxed">
+                        Ciesz się idealną temperaturą w domu, biurze i samochodzie. Gwarantujemy błyskawiczny montaż i niezawodny serwis na terenie Łodzi.
                     </p>
 
-                    <div className="hero-text-anim mt-8 lg:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                        <Link to="/quiz" className="w-full sm:w-auto relative group overflow-hidden bg-accent text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg text-center shadow-lg shadow-accent/20">
+                    <div className="hero-text-anim mt-6 lg:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                        <Link to="/quiz" className="w-full sm:w-auto relative group overflow-hidden bg-accent text-white px-6 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-center shadow-lg shadow-accent/20">
                             <span className="relative z-10 block transition-transform group-hover:scale-105 duration-300">NATYCHMIASTOWA WYCENA</span>
                             <div className="absolute inset-0 bg-[#4ea632] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
                         </Link>
 
-                        <a href="tel:+48604099876" className="w-full sm:w-auto relative bg-[#0C3261] border border-white/10 text-white px-8 py-4 sm:py-5 rounded-xl font-bold text-base sm:text-lg text-center hover:bg-[#164b91] transition-colors shadow-lg shadow-primary/30">
+                        <a href="tel:+48604099876" className="w-full sm:w-auto relative bg-[#0C3261] border border-white/10 text-white px-6 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base text-center hover:bg-[#164b91] transition-colors shadow-lg shadow-primary/30">
                             ZADZWOŃ: 604 099 876
                         </a>
                     </div>
 
                     {/* Checkmarks / Benefits */}
-                    <div className="hero-text-anim mt-6 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-6 text-white/90 font-medium text-sm md:text-base">
-                        <div className="flex items-center gap-2"><Check size={20} className="text-accent shrink-0" /> Szybka realizacja i naprawy</div>
-                        <div className="flex items-center gap-2"><Check size={20} className="text-accent shrink-0" /> Certyfikat F-GAZ</div>
-                        <div className="flex items-center gap-2"><Check size={20} className="text-accent shrink-0" /> Gwarancja bezawaryjności</div>
+                    <div className="hero-text-anim mt-5 sm:mt-6 flex flex-row flex-wrap gap-x-4 gap-y-2 text-white/90 font-medium text-xs md:text-sm">
+                        <div className="flex items-center gap-1.5"><Check size={16} className="text-accent shrink-0" /> Szybka realizacja i naprawy</div>
+                        <div className="flex items-center gap-1.5"><Check size={16} className="text-accent shrink-0" /> Certyfikat F-GAZ</div>
+                        <div className="flex items-center gap-1.5"><Check size={16} className="text-accent shrink-0" /> Gwarancja bezawaryjności</div>
                     </div>
                 </div>
 
                 {/* Brands/Trust section at the bottom */}
-                <div className="hero-text-anim w-full mt-12 lg:mt-24 pt-6 lg:pt-8 border-t border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-                    <div className="flex items-center gap-4 shrink-0">
-                        <div className="w-10 h-10 lg:w-12 lg:h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
-                            <Star size={20} className="text-accent lg:w-6 lg:h-6" fill="currentColor" />
+                <div className="hero-text-anim w-full mt-8 lg:mt-16 pt-4 lg:pt-6 border-t border-white/10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+                    <div className="flex items-center gap-3 shrink-0">
+                        <div className="w-8 h-8 lg:w-10 lg:h-10 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                            <Star size={14} className="text-accent lg:w-5 lg:h-5" fill="currentColor" />
                         </div>
                         <div>
-                            <span className="block text-white font-bold tracking-wide text-xs lg:text-sm uppercase">Autoryzowany Serwis</span>
-                            <span className="block text-white/60 text-xs lg:text-sm">Pracujemy na sprzęcie najwyższej klasy</span>
+                            <span className="block text-white font-bold tracking-wide text-[10px] lg:text-xs uppercase leading-tight">Autoryzowany Serwis</span>
+                            <span className="block text-white/60 text-[10px] lg:text-xs leading-tight">Sprzęt najwyższej klasy</span>
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap items-center justify-start lg:justify-end gap-6 md:gap-12 opacity-50 hover:opacity-90 transition-opacity duration-500 w-full lg:w-auto">
-                        <span className="text-xl md:text-2xl font-black font-heading text-white tracking-widest">LG</span>
-                        <span className="text-xl md:text-2xl font-black font-heading text-white tracking-widest">DAIKIN</span>
-                        <span className="text-xl md:text-2xl font-black font-heading text-white tracking-widest">GREE</span>
-                        <span className="text-xl md:text-2xl font-black font-heading text-white tracking-widest italic">Sinclair</span>
+                    <div className="flex flex-row items-center justify-start lg:justify-end gap-5 md:gap-8 opacity-50 w-full lg:w-auto overflow-x-auto pb-1 no-scrollbar">
+                        <span className="text-lg md:text-xl font-black font-heading text-white tracking-widest shrink-0">LG</span>
+                        <span className="text-lg md:text-xl font-black font-heading text-white tracking-widest shrink-0">DAIKIN</span>
+                        <span className="text-lg md:text-xl font-black font-heading text-white tracking-widest shrink-0">GREE</span>
+                        <span className="text-lg md:text-xl font-black font-heading text-white tracking-widest italic shrink-0">Sinclair</span>
                     </div>
                 </div>
 
