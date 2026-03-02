@@ -51,24 +51,24 @@ const Hero = () => {
                         href="https://search.google.com/local/reviews?placeid=ChIJsU_o2oDLG0cR7pVof1AXm4Q"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hero-text-anim flex items-center gap-2 sm:gap-4 bg-white/95 hover:bg-white rounded-lg p-2 pr-3 sm:pr-4 w-fit mb-4 sm:mb-6 shadow-2xl scale-95 sm:scale-100 origin-center cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-xl group"
+                        className="hero-text-anim flex items-center gap-3 sm:gap-4 bg-white/10 backdrop-blur-md rounded-xl p-2.5 pr-4 sm:pr-5 w-fit mb-6 sm:mb-8 border border-white/10 shadow-2xl scale-95 sm:scale-100 origin-center cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:bg-white/15 group"
                     >
-                        <div className="flex flex-col items-center justify-center bg-gray-50 rounded px-2 py-0.5 border border-gray-100 group-hover:bg-white transition-colors">
-                            <span className="text-dark font-black text-sm sm:text-base leading-tight">5.0</span>
-                            <div className="flex text-yellow-400">
-                                <Star size={8} sm-size={10} fill="currentColor" />
-                                <Star size={8} sm-size={10} fill="currentColor" />
-                                <Star size={8} sm-size={10} fill="currentColor" />
-                                <Star size={8} sm-size={10} fill="currentColor" />
-                                <Star size={8} sm-size={10} fill="currentColor" />
+                        <div className="flex flex-col items-center justify-center px-2 py-0.5">
+                            <span className="text-white font-black text-base sm:text-lg leading-tight">4.8</span>
+                            <div className="flex text-yellow-400 mt-1">
+                                <Star size={10} fill="currentColor" />
+                                <Star size={10} fill="currentColor" />
+                                <Star size={10} fill="currentColor" />
+                                <Star size={10} fill="currentColor" />
+                                <Star size={10} fill="currentColor" className="opacity-70" />
                             </div>
                         </div>
                         <div className="flex flex-col text-left">
-                            <span className="text-dark font-bold text-xs sm:text-sm leading-tight group-hover:text-primary transition-colors">Zweryfikowane w Google</span>
-                            <span className="text-gray-500 text-[9px] sm:text-[10px] leading-tight mt-0.5">Zobacz opinie naszych klientów</span>
+                            <span className="text-white font-bold text-xs sm:text-sm leading-tight">Zweryfikowane w Google</span>
+                            <span className="text-white/50 text-[10px] sm:text-xs leading-tight mt-0.5">Zobacz opinie naszych klientów</span>
                         </div>
-                        <div className="ml-1 w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center rounded-full bg-blue-50 shrink-0">
-                            <span className="font-bold text-sm sm:text-base" style={{ color: '#4285F4' }}>G</span>
+                        <div className="ml-1 sm:ml-2 font-bold text-base sm:text-lg text-blue-400 shrink-0">
+                            G
                         </div>
                     </a>
 
