@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import CartIcon from './CartIcon';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
@@ -15,10 +16,11 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'O nas', href: '#o-nas' },
-        { name: 'Usługi', href: '#uslugi' },
-        { name: 'Opinie', href: '#opinie' },
-        { name: 'FAQ', href: '#faq' },
+        { name: 'O nas', href: '/#o-nas' },
+        { name: 'Usługi', href: '/#uslugi' },
+        { name: 'Sklep', href: '/sklep', isRoute: true },
+        { name: 'Opinie', href: '/#opinie' },
+        { name: 'FAQ', href: '/#faq' },
     ];
 
     return (
@@ -34,20 +36,32 @@ const Navbar = () => {
 
             {/* Desktop Links */}
             <div className="hidden md:flex items-center gap-8">
-                {navLinks.map((link) => (
-                    <a
-                        key={link.name}
-                        href={link.href}
-                        className={`font-medium text-sm transition-transform hover:-translate-y-0.5 ${scrolled ? 'text-dark hover:text-accent' : 'text-white/90 hover:text-white'
-                            }`}
-                    >
-                        {link.name}
-                    </a>
-                ))}
+                {navLinks.map((link) =>
+                    link.isRoute ? (
+                        <Link
+                            key={link.name}
+                            to={link.href}
+                            className={`font-medium text-sm transition-transform hover:-translate-y-0.5 ${scrolled ? 'text-dark hover:text-accent' : 'text-white/90 hover:text-white'
+                                }`}
+                        >
+                            {link.name}
+                        </Link>
+                    ) : (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            className={`font-medium text-sm transition-transform hover:-translate-y-0.5 ${scrolled ? 'text-dark hover:text-accent' : 'text-white/90 hover:text-white'
+                                }`}
+                        >
+                            {link.name}
+                        </a>
+                    )
+                )}
             </div>
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
+            {/* CTA + Cart */}
+            <div className="hidden md:flex items-center gap-3">
+                <CartIcon scrolled={scrolled} />
                 <Link
                     to="/quiz"
                     className="group relative overflow-hidden inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-accent text-white font-semibold text-sm transition-transform hover:scale-105"
@@ -60,7 +74,10 @@ const Navbar = () => {
                 </Link>
             </div>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile cart + toggle */}
+            <div className="md:hidden flex items-center gap-2">
+                <CartIcon scrolled={scrolled} />
+            </div>
             <button
                 className="md:hidden p-2"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -75,16 +92,27 @@ const Navbar = () => {
             {/* Mobile Menu Dropdown */}
             {mobileMenuOpen && (
                 <div className="absolute top-full left-0 mt-4 w-full bg-white rounded-3xl p-6 shadow-2xl border border-gray-100 flex flex-col gap-4 text-dark md:hidden">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className="font-medium text-lg py-2 border-b border-gray-100"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
-                            {link.name}
-                        </a>
-                    ))}
+                    {navLinks.map((link) =>
+                        link.isRoute ? (
+                            <Link
+                                key={link.name}
+                                to={link.href}
+                                className="font-medium text-lg py-2 border-b border-gray-100"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {link.name}
+                            </Link>
+                        ) : (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className="font-medium text-lg py-2 border-b border-gray-100"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                {link.name}
+                            </a>
+                        )
+                    )}
                     <Link
                         to="/quiz"
                         className="mt-4 flex items-center justify-center gap-2 bg-accent text-white py-3 rounded-xl font-bold"
